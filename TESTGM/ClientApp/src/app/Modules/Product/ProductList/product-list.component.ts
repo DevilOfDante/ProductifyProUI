@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; // Importa NgbModal
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; // Import NgbModal
 import { AddItemModalComponent } from '../../../Components/add-item-modal/add-item-modal.component';
 import { ProductService } from '../../../Services/Product.Services'; // Import ProductService
 import { Router } from '@angular/router';
