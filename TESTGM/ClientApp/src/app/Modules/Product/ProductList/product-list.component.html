@@ -1,0 +1,30 @@
+<div>
+  <h2>Product List</h2>
+  <button class="btn btn-primary" (click)="openModal(true)">Add Product</button>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th style="display: none;">Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="ProductRow" *ngFor="let product of productService.products" (click)="navigateToProductDetails(product.id)">
+        <td style="display:none;">{{ product.id}}</td>
+        <td>{{ product.name}}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price}}</td>
+        <td>{{ product.category}}</td>
+        <td>{{ product.color }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!productService.products || productService.products.length === 0">
+    <p>No records found</p>
+  </div>
+</div>

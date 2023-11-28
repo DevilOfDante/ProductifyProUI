@@ -1,0 +1,24 @@
+<div>
+  <h2>Category List</h2>
+  <button class="btn btn-primary" (click)="openModal(false)">Add Category</button>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th style="display: none;">Id</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="CategoryRow" *ngFor="let category of categoryService.categories" (click)="navigateToCategoryDetails(category.id)">
+        <td style="display: none;">{{ category.id }}</td>
+        <td>{{ category.name }}</td>
+        <td>{{ category.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!categoryService.categories || categoryService.categories.length === 0">
+    <p>No records found</p>
+  </div>
+</div>
