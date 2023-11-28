@@ -7,7 +7,9 @@ import { Product } from '../../../Models/Product';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './product-list.component.html'
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
+
 })
 export class ProductListComponent {
   products: Product[] = []; // Array to hold products
