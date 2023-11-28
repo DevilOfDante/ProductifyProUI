@@ -1,6 +1,11 @@
 <!-- add-item-modal.component.html -->
 <div class="modal-header">
-  <h4 class="modal-title">Add Item</h4>
+  <div *ngIf="isProduct">
+  <h4 class="modal-title">Add Product</h4>
+  </div>
+  <div *ngIf="!isProduct">
+  <h4 class="modal-title">Add Category</h4>
+  </div>
   <button type="button" class="close" aria-label="Close" (click)="dismissModal()">
     <span aria-hidden="true">&times;</span>
   </button>
